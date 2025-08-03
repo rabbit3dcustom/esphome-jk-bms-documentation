@@ -198,9 +198,7 @@ binary_sensor:
       name: "${jkibms_01} alarm BATTempSensor4Absent"
     alarm_battempsensor5absent:
       name: "${jkibms_01} alarm BATTempSensor5Absent"
-
-    # JK-02 - BINARY SENSORS
-    # ###################################################      
+   
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     status_balancing:
@@ -357,8 +355,6 @@ number:
     cell_request_float_voltage_time:
       name: "${jkibms_01} cell request float volt time"        
 
-    # JK-02 - NUMBERS
-    ###################################################
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     cell_smart_sleep_voltage:
@@ -594,7 +590,7 @@ sensor:
       name: "${jkibms_01} charging cycles"
     battery_capacity_total_charging_cycle:
       name: "${jkibms_01} bat capacity total charging cycle"
-    battery_total_runtime:                                                            #2025-06-10: Not needed, with the normal bat power is enough.
+    battery_total_runtime:                                                            
       name: "${jkibms_01} bat total runtime"
     balancing_current:
       name: "${jkibms_01} balancing current"
@@ -604,9 +600,9 @@ sensor:
       name: "${jkibms_01} cell count real"
     smart_sleep_time:
       name: "${jkibms_01} smart sleep time"
-    powertube_temperature_protection:                                                 #2025-06-10: Not needed. Unknown with comms.
+    powertube_temperature_protection:                                                 
       name: "${jkibms_01} powertube temp protection" 
-    powertube_temperature_protection_recovery:                                        #2025-06-10: Not needed. Unknown with comms.
+    powertube_temperature_protection_recovery:                                        
       name: "${jkibms_01} powertube temp protection recovery"  
     battery_total_alarms_count:     
       name: "${jkibms_01} bat total alarms count"  
@@ -614,9 +610,9 @@ sensor:
       name: "${jkibms_01} bat total alarms active"  
     emergency_time_countdown:
       name: "${jkibms_01} emergency time countdown"      
-    uart1_protocol_number:                                                          #2025-06-10: Not needed
+    uart1_protocol_number:                                                         
       name: "${jkibms_01} uart1 protocol number"
-    uart2_protocol_number:                                                          #2025-06-10: Not needed
+    uart2_protocol_number:                                                         
       name: "${jkibms_01} uart2 protocol number"      
     battery_soh_valuation:    
       name: "${jkibms_01} bat soh valuation"
@@ -633,8 +629,6 @@ sensor:
     cell_overvoltage_protection_release_time:    
       name: "${jkibms_01} cell overvolt protection release time"
 
-    # JK-02 SENSOR
-    # ###################################################
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     balancing_direction:
@@ -652,13 +646,13 @@ sensor:
     cell_average_voltage:
       name: "${jkibms_02} cell average volt"
     cell_resistance_min:
-      name: "${jkibms_02} cell resist min"               #2025-07-05: Not needed.
+      name: "${jkibms_02} cell resist min"               
     cell_resistance_max:
-      name: "${jkibms_02} cell resist max"               #2025-07-05: Not needed.
+      name: "${jkibms_02} cell resist max"               
     cell_resistance_min_cell_number:
-      name: "${jkibms_02} cell resist min cell number"   #2025-07-05: Not needed.
+      name: "${jkibms_02} cell resist min cell number"   
     cell_resistance_max_cell_number:
-      name: "${jkibms_02} cell resist max cell number"   #2025-07-05: Not needed.
+      name: "${jkibms_02} cell resist max cell number"   
     cell_voltage_01:
       name: "${jkibms_02} cell volt 01"
     cell_voltage_02:
@@ -877,9 +871,7 @@ switch:
       name: "${jkibms_01} port selection"
     special_charger:
       name: "${jkibms_01} special charger" 
-
-    # JK-02 SWITCH
-    # ###################################################    
+   
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     precharging:
@@ -948,6 +940,7 @@ text_sensor:
       name: "${jkibms_01} info device serial number" 
     info_device_setup_passcode:
       name: "${jkibms_01} info device setup passcode"  
+      
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     errors:
