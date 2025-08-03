@@ -40,7 +40,7 @@ Other PB models should work, but not tested.
 ## File examples
 The next section will redirect you to the file example list.
 
-[configuration files](esphome-jk-bms-component\yaml_files.md)
+[configuration files](esphome-jk-bms-component/yaml_files.md)
 
 
 # About RS845
