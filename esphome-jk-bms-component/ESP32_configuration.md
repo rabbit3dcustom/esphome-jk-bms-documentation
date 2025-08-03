@@ -2,13 +2,6 @@
 
 You will find the explanation of each section of the yaml files to add to Home Assistant via ESPHome Builder
 
-## YAML EXAMPLE FILES:
-
-- Example with one master bms and one slave [esphome_master_slave.yaml](esphome-jk-bms-component\examples\esphome_master_slave.yaml)
-
-- Example with NO master bms [esphome_no_master.yaml](esphome-jk-bms-component\examples\esphome_no_master.yaml)
-
-
 # EXPLANATION:
 
 ## SUBSTITUTIONS:

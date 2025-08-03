@@ -120,6 +120,10 @@ jk_rs485_bms:
     rs485_address: 0x01
     jk_rs485_sniffer_id: sniffer0
 
+  - id: bms3
+    rs485_address: 0x03    #<<<<< DIP switch 0100
+    jk_rs485_sniffer_id: sniffer0    
+
 # ###################################################
 # BINARY SENSORS
 # ###################################################
@@ -275,6 +279,81 @@ binary_sensor:
       name: "${jkibms_02} alarm BATTempSensor4Absent"
     alarm_battempsensor5absent:
       name: "${jkibms_02} alarm BATTempSensor5Absent"      
+  - platform: jk_rs485_bms
+    jk_rs485_bms_id: bms3
+    status_balancing:
+      name: "${jkibms_03} status balancing"
+    status_precharging:
+      name: "${jkibms_03} status precharging"      
+    status_charging:
+      name: "${jkibms_03} status charging"
+    status_discharging:
+      name: "${jkibms_03} status discharging"
+    status_online:
+      name: "${jkibms_03} status online"
+    status_heating:                                               
+      name: "${jkibms_03} status heating"      
+    alarm_wireres:                                                
+      name: "${jkibms_03} alarm WireRes"
+    alarm_mosotp:
+      name: "${jkibms_03} alarm MosOTP"
+    alarm_cellquantity:                                           
+      name: "${jkibms_03} alarm CellQuantity"
+    alarm_cursensorerr:                                           
+      name: "${jkibms_03} alarm CurSensorErr"
+    alarm_cellovp:
+      name: "${jkibms_03} alarm CellOVP"
+    alarm_batovp:
+      name: "${jkibms_03} alarm BatOVP"
+    alarm_chocp:
+      name: "${jkibms_03} alarm ChOCP"
+    alarm_chscp:
+      name: "${jkibms_03} alarm ChSCP"
+    alarm_chotp:
+      name: "${jkibms_03} alarm ChOTP"
+    alarm_chutp:
+      name: "${jkibms_03} alarm ChUTP"
+    alarm_cpuauxcommuerr:                                             
+      name: "${jkibms_03} alarm CPUAuxCommuErr"
+    alarm_celluvp:
+      name: "${jkibms_03} alarm CellUVP"
+    alarm_batuvp:
+      name: "${jkibms_03} alarm BatUVP"
+    alarm_dchocp:
+      name: "${jkibms_03} alarm DchOCP"
+    alarm_dchscp:
+      name: "${jkibms_03} alarm DchSCP"
+    alarm_dchotp:
+      name: "${jkibms_03} alarm DchOTP"
+    alarm_chargemos:
+      name: "${jkibms_03} alarm ChargeMOS"
+    alarm_dischargemos:
+      name: "${jkibms_03} alarm DischargeMOS"
+    alarm_gpsdisconneted:
+      name: "${jkibms_03} alarm GPSDisconneted"
+    alarm_modifypwdintime:
+      name: "${jkibms_03} alarm ModifyPWDinTime"
+    alarm_dischargeonfailed:
+      name: "${jkibms_03} alarm DischargeOnFailed"
+    alarm_batteryovertemp:
+      name: "${jkibms_03} alarm BatteryOverTemp"
+    alarm_temperaturesensoranomaly:
+      name: "${jkibms_03} alarm TemperatureSensorAnomaly"
+    alarm_plcmoduleanomaly:
+      name: "${jkibms_03} alarm PLCModuleAnomaly"
+    alarm_mostempsensorabsent:
+      name: "${jkibms_03} alarm MOSTempSensorAbsent"
+    alarm_battempsensor1absent:
+      name: "${jkibms_03} alarm BATTempSensor1Absent"
+    alarm_battempsensor2absent:
+      name: "${jkibms_03} alarm BATTempSensor2Absent"
+    alarm_battempsensor3absent:
+      name: "${jkibms_03} alarm BATTempSensor3Absent"
+    alarm_battempsensor4absent:
+      name: "${jkibms_03} alarm BATTempSensor4Absent"
+    alarm_battempsensor5absent:
+      name: "${jkibms_03} alarm BATTempSensor5Absent"
+
 
 # ###################################################
 # BUTTONS
@@ -429,6 +508,13 @@ number:
       name: "${jkibms_02} cell request charge volt time"    
     cell_request_float_voltage_time:
       name: "${jkibms_02} cell request float volt time" 
+  - platform: jk_rs485_bms
+    jk_rs485_bms_id: bms3
+    cell_smart_sleep_voltage:
+      name: "${jkibms_03} cell smart sleep volt"
+    .
+    .
+    .
 
 # ###################################################
 # SENSOR
@@ -437,13 +523,13 @@ sensor:
   - platform: wifi_signal
     name: "${name} WiFi Signal"
     update_interval: 60s
+
   - platform: uptime
     name: "UptimeSecs"
     update_interval: 5s    
       
     # JK-01 SENSOR
     # ###################################################
-
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms1
     balancing_direction:
@@ -823,7 +909,13 @@ sensor:
       name: "${jkibms_02} cell undervolt protection release time"
     cell_overvoltage_protection_release_time:    
       name: "${jkibms_02} cell overvolt protection release time"
-
+  - platform: jk_rs485_bms
+    jk_rs485_bms_id: bms3
+    balancing_direction:
+      name: "${jkibms_03} balancing direction"
+    .
+    .
+    .
 
 # ###################################################
 # SWITCH
@@ -844,7 +936,7 @@ switch:
 
     # JK-01 SWITCH
     # ###################################################    
-  
+
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms1
     precharging:
@@ -912,6 +1004,13 @@ switch:
       name: "${jkibms_02} port selection"
     special_charger:
       name: "${jkibms_02} special charger" 
+  - platform: jk_rs485_bms
+    jk_rs485_bms_id: bms3
+    precharging:
+      name: "${jkibms_03} precharging"
+    .
+    .
+    .
 
 # ###################################################
 # TEXT
@@ -974,6 +1073,13 @@ text_sensor:
       name: "${jkibms_02} info device serial number" 
     info_device_setup_passcode:
       name: "${jkibms_02} info device setup passcode"  
+  - platform: jk_rs485_bms
+    jk_rs485_bms_id: bms3
+    errors:
+      name: "${jkibms_03} errors"
+    .
+    .
+    .
 
 # ###################################################
   - platform: wifi_info
