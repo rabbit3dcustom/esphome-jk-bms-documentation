@@ -42,8 +42,16 @@ The next section will redirect you to the file example list.
 
 [configuration files](yaml_files.md)
 
+## Configuration explanation
+The next section will redirect you to the configuration explanation
+
+[configuration](ESP32_configuration.md)
 
 # About RS845
+The next section will redirect you to the rs845 tips.
+
+[rs485](rs485.md)
+
 
 
 ## MUCH MORE
