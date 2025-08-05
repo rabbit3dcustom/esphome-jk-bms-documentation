@@ -26,7 +26,7 @@ Description
 At the JKBMS Looking the connector from the bottom/back, the clip should be facing down.
 
 ```
-Usable any of the two wirings:
+Use any of the two wirings:
 ┌─────────────────────────┐          ┌─────────────────────────┐
 │                         │          │                         │
 │ O  O  O  O  O  O  O  O  │   OR     │ O  O  O  O  O  O  O  O  │
@@ -39,4 +39,7 @@ Usable any of the two wirings:
 ```
 
 ## Example
+
 ![image](./images/ESP32-Schematics.png)
+
+(Click on the image to enlarge)
