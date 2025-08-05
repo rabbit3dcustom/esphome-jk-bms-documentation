@@ -66,6 +66,10 @@ The next section will redirect you to the file example list.
 
 
 
+<details>
+
+<summary>Other related information</summary>
+
 ## MUCH MORE
 
 Added a <a href="./home_assistant_dashboards/">Home Assistant Dashboard</a>
@@ -86,6 +90,9 @@ Added a <a href="./home_assistant_dashboards/">Home Assistant Dashboard</a>
 - https://github.com/Louisvdw/dbus-serialbattery/blob/master/etc/dbus-serialbattery/jkbms.py
 - https://blog.ja-ke.tech/2020/02/07/ltt-power-bms-chinese-protocol.html
 
+<details>
+
 
 ### Support me at
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://coff.ee/rabbit3dcustom)
+
