@@ -8,6 +8,8 @@
 
 ## INTRO
 
+Welcome! 
+
 ESPHome component to monitor a Jikong Battery Management System (JK-PB) via ESP SERIAL (UART-TTL) + SERIAL TO RS485 + ETHERNET CABLE
 In theory 1 ESP can gather information of every BMS in the RS485 network: MAX 16 bms.
 
@@ -32,10 +34,15 @@ Other PB models should work, but not tested.
 
 ## Requirements
 
-- [ESPHome 2022.11.0 or higher] (https://github.com/esphome/esphome/releases).
+- [ESPHome 2025.5.2 or higher] (https://github.com/esphome/esphome/releases).
 - Generic ESP32 or ESP8266 board
-- SERIAL TTL to RS485 converter
+- SERIAL TTL to RS485 converter 
 - Ethernet type cable (one side with RJ45, the other side 3 wires: A, B and GND)
+
+## How to start!
+Over this section i will explain how to connect all the components to each other in other to have the ESP32 board ready to start receiving information from your BMSs
+
+[Hardware connections](hardware_connection.md)
 
 ## File examples
 The next section will redirect you to the file example list.
@@ -51,7 +58,6 @@ The next section will redirect you to the configuration explanation
 The next section will redirect you to the rs845 tips.
 
 [rs485](rs485.md)
-
 
 
 ## MUCH MORE
