@@ -40,7 +40,7 @@ substitutions:
 
 **jkibms_01 ... jkibms_15**: Give a name for every JK inverter BMS. To use the dashboards correctly is mandatory to use a number at the end of each name '_1';'_2';...;'_15'
 
-**tx_pin_uart_0**; **rx_pin_uart_0**;**talk_pin_rs485**: Use the GPIO pins that you choose in the ESP32.: 
+**tx_pin_uart_0**; **rx_pin_uart_0**;**talk_pin_rs485**: Use the GPIO pins that you choose in the ESP32 wiring diagram [Hardware connections](hardware_connection.md)
 
 **protocol_version**: Inherit from "syssi", do not touch.
 
@@ -174,7 +174,19 @@ jk_rs485_sniffer:
 ## BMS CONFIGURATION:
 Copy and paste the 'id' block for each of the bms in your system. In regular configuration 'bms1' is the master, so the address is 0x00. 
 
-The addresses are in hexadecimal numbers, so use a hexadecimal calculator.
+The addresses are in hexadecimal numbers:
+
+|bms number| DIP | Headecimal| Desc | bms number| DIP | Headecimal|
+| ---      | --- |       --- |  --- |       --- | --- |       --- |
+| 0 | 0000 | 0x00 | Master|  | |
+| 1 | 1000 | 0x01 | | 2 | 0100 | 0x02
+| 3 | 1100 | 0x03 | | 4 | 0010 | 0x04
+| 5 | 1010 | 0x05 | | 6 | 0110 | 0x06
+| 7 | 1110 | 0x07 | | 8 | 0001 | 0x08
+| 9 | 1001 | 0x09 | | 10 | 0101 | 0x0A
+| 11 | 1101 | 0x0B| | 12 | 0011 | 0x0C
+| 13 | 1011 | 0x0D| | 14 | 0111 | 0x0E
+| 15 | 1111 | 0x0F| |  |  | 
 
 ```
 jk_rs485_bms: 
@@ -326,3 +338,4 @@ text_sensor:
     .
     .    
 ```
+

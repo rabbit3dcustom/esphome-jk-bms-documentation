@@ -52,20 +52,18 @@ Over this section i will explain how to connect all the components to each other
 
 [Hardware connections](hardware_connection.md)
 
-## File examples
-The next section will redirect you to the file example list.
-
-[configuration files](yaml_files.md)
-
 ## Configuration explanation
 The next section will redirect you to the configuration explanation
 
 [configuration](ESP32_configuration.md)
 
-# About RS845
-The next section will redirect you to the rs845 tips.
+## Configuration files examples
+The next section will redirect you to the file example list.
 
-[rs485](rs485.md)
+[configuration files](configuration_yaml_files.md)
+
+## Home Assistant Dashboards
+
 
 
 ## MUCH MORE

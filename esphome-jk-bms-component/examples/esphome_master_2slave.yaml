@@ -202,7 +202,7 @@ binary_sensor:
       name: "${jkibms_01} alarm BATTempSensor4Absent"
     alarm_battempsensor5absent:
       name: "${jkibms_01} alarm BATTempSensor5Absent"
-
+   
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     status_balancing:
@@ -282,77 +282,9 @@ binary_sensor:
     jk_rs485_bms_id: bms3
     status_balancing:
       name: "${jkibms_03} status balancing"
-    status_precharging:
-      name: "${jkibms_03} status precharging"      
-    status_charging:
-      name: "${jkibms_03} status charging"
-    status_discharging:
-      name: "${jkibms_03} status discharging"
-    status_online:
-      name: "${jkibms_03} status online"
-    status_heating:                                               
-      name: "${jkibms_03} status heating"      
-    alarm_wireres:                                                
-      name: "${jkibms_03} alarm WireRes"
-    alarm_mosotp:
-      name: "${jkibms_03} alarm MosOTP"
-    alarm_cellquantity:                                           
-      name: "${jkibms_03} alarm CellQuantity"
-    alarm_cursensorerr:                                           
-      name: "${jkibms_03} alarm CurSensorErr"
-    alarm_cellovp:
-      name: "${jkibms_03} alarm CellOVP"
-    alarm_batovp:
-      name: "${jkibms_03} alarm BatOVP"
-    alarm_chocp:
-      name: "${jkibms_03} alarm ChOCP"
-    alarm_chscp:
-      name: "${jkibms_03} alarm ChSCP"
-    alarm_chotp:
-      name: "${jkibms_03} alarm ChOTP"
-    alarm_chutp:
-      name: "${jkibms_03} alarm ChUTP"
-    alarm_cpuauxcommuerr:                                             
-      name: "${jkibms_03} alarm CPUAuxCommuErr"
-    alarm_celluvp:
-      name: "${jkibms_03} alarm CellUVP"
-    alarm_batuvp:
-      name: "${jkibms_03} alarm BatUVP"
-    alarm_dchocp:
-      name: "${jkibms_03} alarm DchOCP"
-    alarm_dchscp:
-      name: "${jkibms_03} alarm DchSCP"
-    alarm_dchotp:
-      name: "${jkibms_03} alarm DchOTP"
-    alarm_chargemos:
-      name: "${jkibms_03} alarm ChargeMOS"
-    alarm_dischargemos:
-      name: "${jkibms_03} alarm DischargeMOS"
-    alarm_gpsdisconneted:
-      name: "${jkibms_03} alarm GPSDisconneted"
-    alarm_modifypwdintime:
-      name: "${jkibms_03} alarm ModifyPWDinTime"
-    alarm_dischargeonfailed:
-      name: "${jkibms_03} alarm DischargeOnFailed"
-    alarm_batteryovertemp:
-      name: "${jkibms_03} alarm BatteryOverTemp"
-    alarm_temperaturesensoranomaly:
-      name: "${jkibms_03} alarm TemperatureSensorAnomaly"
-    alarm_plcmoduleanomaly:
-      name: "${jkibms_03} alarm PLCModuleAnomaly"
-    alarm_mostempsensorabsent:
-      name: "${jkibms_03} alarm MOSTempSensorAbsent"
-    alarm_battempsensor1absent:
-      name: "${jkibms_03} alarm BATTempSensor1Absent"
-    alarm_battempsensor2absent:
-      name: "${jkibms_03} alarm BATTempSensor2Absent"
-    alarm_battempsensor3absent:
-      name: "${jkibms_03} alarm BATTempSensor3Absent"
-    alarm_battempsensor4absent:
-      name: "${jkibms_03} alarm BATTempSensor4Absent"
-    alarm_battempsensor5absent:
-      name: "${jkibms_03} alarm BATTempSensor5Absent"
-
+    .
+    .
+    .
 
 # ###################################################
 # BUTTONS
@@ -367,7 +299,7 @@ number:
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms1
     cell_smart_sleep_voltage:
-      name: "${jkibms_01} cell smart sleep volt" 
+      name: "${jkibms_01} cell smart sleep voltage" 
     cell_undervoltage_protection:
       name: "${jkibms_01} cell undervolt protection"
     cell_undervoltage_protection_recovery:
@@ -377,19 +309,19 @@ number:
     cell_overvoltage_protection_recovery:    
       name: "${jkibms_01} cell overvolt protection recovery"
     cell_balancing_trigger_voltage:
-      name: "${jkibms_01} balancing trigger volt"      
+      name: "${jkibms_01} balancing trigger voltage"      
     cell_soc100_voltage:
-      name: "${jkibms_01} cell soc100 volt"            
+      name: "${jkibms_01} cell soc100 voltage"            
     cell_soc0_voltage:
-      name: "${jkibms_01} cell soc0 volt"      
+      name: "${jkibms_01} cell soc0 voltage"      
     cell_request_charge_voltage:
-      name: "${jkibms_01} cell request charge volt"      
+      name: "${jkibms_01} cell request charge voltage"      
     cell_request_float_voltage:
-      name: "${jkibms_01} cell request float volt"      
+      name: "${jkibms_01} cell request float voltage"      
     cell_power_off_voltage:
-      name: "${jkibms_01} cell power off volt"      
+      name: "${jkibms_01} cell power off voltage"      
     cell_balancing_starting_voltage:
-      name: "${jkibms_01} cell balancing starting volt"             
+      name: "${jkibms_01} cell balancing starting voltage"             
     max_charging_current:
       name: "${jkibms_01} max charging current"        
     charging_overcurrent_protection_delay:
@@ -431,14 +363,14 @@ number:
     precharging_time_from_discharge:
       name: "${jkibms_01} precharging time from discharge"        
     cell_request_charge_voltage_time:
-      name: "${jkibms_01} cell request charge volt time"    
+      name: "${jkibms_01} cell request charge voltage time"    
     cell_request_float_voltage_time:
-      name: "${jkibms_01} cell request float volt time"        
+      name: "${jkibms_01} cell request float voltage time"        
 
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     cell_smart_sleep_voltage:
-      name: "${jkibms_02} cell smart sleep volt" 
+      name: "${jkibms_02} cell smart sleep voltage" 
     cell_undervoltage_protection:
       name: "${jkibms_02} cell undervolt protection"
     cell_undervoltage_protection_recovery:
@@ -448,19 +380,19 @@ number:
     cell_overvoltage_protection_recovery:    
       name: "${jkibms_02} cell overvolt protection recovery"
     cell_balancing_trigger_voltage:
-      name: "${jkibms_02} balancing trigger volt"      
+      name: "${jkibms_02} balancing trigger voltage"      
     cell_soc100_voltage:
-      name: "${jkibms_02} cell soc100 volt"            
+      name: "${jkibms_02} cell soc100 voltage"            
     cell_soc0_voltage:
-      name: "${jkibms_02} cell soc0 volt"      
+      name: "${jkibms_02} cell soc0 voltage"      
     cell_request_charge_voltage:
-      name: "${jkibms_02} cell request charge volt"      
+      name: "${jkibms_02} cell request charge voltage"      
     cell_request_float_voltage:
-      name: "${jkibms_02} cell request float volt"      
+      name: "${jkibms_02} cell request float voltage"      
     cell_power_off_voltage:
-      name: "${jkibms_02} cell power off volt"      
+      name: "${jkibms_02} cell power off voltage"      
     cell_balancing_starting_voltage:
-      name: "${jkibms_02} cell balancing starting volt"             
+      name: "${jkibms_02} cell balancing starting voltage"             
     max_charging_current:
       name: "${jkibms_02} max charging current"        
     charging_overcurrent_protection_delay:
@@ -502,14 +434,14 @@ number:
     precharging_time_from_discharge:
       name: "${jkibms_02} precharging time from discharge"        
     cell_request_charge_voltage_time:
-      name: "${jkibms_02} cell request charge volt time"    
+      name: "${jkibms_02} cell request charge voltage time"    
     cell_request_float_voltage_time:
-      name: "${jkibms_02} cell request float volt time" 
+      name: "${jkibms_02} cell request float voltage time" 
 
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms3
     cell_smart_sleep_voltage:
-      name: "${jkibms_03} cell smart sleep volt"
+      name: "${jkibms_03} cell smart sleep voltage" 
     .
     .
     .
@@ -521,133 +453,135 @@ sensor:
   - platform: wifi_signal
     name: "${name} WiFi Signal"
     update_interval: 60s
-
   - platform: uptime
     name: "UptimeSecs"
     update_interval: 5s    
       
+    # JK-01 SENSOR
+    # ###################################################
+
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms1
     balancing_direction:
       name: "${jkibms_01} balancing direction"
     cell_voltage_min:
-      name: "${jkibms_01} cell volt min"
+      name: "${jkibms_01} cell voltage min"
     cell_voltage_max:
-      name: "${jkibms_01} cell volt max"
+      name: "${jkibms_01} cell voltage max"
     cell_voltage_min_cell_number:
-      name: "${jkibms_01} cell volt min cell number"
+      name: "${jkibms_01} cell voltage min cell number"
     cell_voltage_max_cell_number:
-      name: "${jkibms_01} cell volt max cell number"
+      name: "${jkibms_01} cell voltage max cell number"
     cell_delta_voltage:
-      name: "${jkibms_01} cell delta volt"
+      name: "${jkibms_01} cell delta voltage"
     cell_average_voltage:
-      name: "${jkibms_01} cell average volt"
+      name: "${jkibms_01} cell average voltage"
     cell_resistance_min:
-      name: "${jkibms_01} cell resist min"                
+      name: "${jkibms_01} cell resistance min"                
     cell_resistance_max:
-      name: "${jkibms_01} cell resist max"                  
+      name: "${jkibms_01} cell resistance max"                  
     cell_resistance_min_cell_number:
-      name: "${jkibms_01} cell resist min cell number"        
+      name: "${jkibms_01} cell resistance min cell number"        
     cell_resistance_max_cell_number:
-      name: "${jkibms_01} cell resist max cell number"        
+      name: "${jkibms_01} cell resistance max cell number"        
     cell_voltage_01:
-      name: "${jkibms_01} cell volt 01"
+      name: "${jkibms_01} cell voltage 01"
     cell_voltage_02:
-      name: "${jkibms_01} cell volt 02"
+      name: "${jkibms_01} cell voltage 02"
     cell_voltage_03:
-      name: "${jkibms_01} cell volt 03"
+      name: "${jkibms_01} cell voltage 03"
     cell_voltage_04:
-      name: "${jkibms_01} cell volt 04"
+      name: "${jkibms_01} cell voltage 04"
     cell_voltage_05:
-      name: "${jkibms_01} cell volt 05"
+      name: "${jkibms_01} cell voltage 05"
     cell_voltage_06:
-      name: "${jkibms_01} cell volt 06"
+      name: "${jkibms_01} cell voltage 06"
     cell_voltage_07:
-      name: "${jkibms_01} cell volt 07"
+      name: "${jkibms_01} cell voltage 07"
     cell_voltage_08:
-      name: "${jkibms_01} cell volt 08"
+      name: "${jkibms_01} cell voltage 08"
     cell_voltage_09:
-      name: "${jkibms_01} cell volt 09"
+      name: "${jkibms_01} cell voltage 09"
     cell_voltage_10:
-      name: "${jkibms_01} cell volt 10"
+      name: "${jkibms_01} cell voltage 10"
     cell_voltage_11:
-      name: "${jkibms_01} cell volt 11"
+      name: "${jkibms_01} cell voltage 11"
     cell_voltage_12:
-      name: "${jkibms_01} cell volt 12"
+      name: "${jkibms_01} cell voltage 12"
     cell_voltage_13:
-      name: "${jkibms_01} cell volt 13"
+      name: "${jkibms_01} cell voltage 13"
     cell_voltage_14:
-      name: "${jkibms_01} cell volt 14"
+      name: "${jkibms_01} cell voltage 14"
     cell_voltage_15:
-      name: "${jkibms_01} cell volt 15"
+      name: "${jkibms_01} cell voltage 15"
     cell_voltage_16:
-      name: "${jkibms_01} cell volt 16"
+      name: "${jkibms_01} cell voltage 16"
     # cell_voltage_17:
-    #   name: "${jkibms_01} cell volt 17"
+    #   name: "${jkibms_01} cell voltage 17"
     # cell_voltage_18:
-    #   name: "${jkibms_01} cell volt 18"
+    #   name: "${jkibms_01} cell voltage 18"
     # cell_voltage_19:
-    #   name: "${jkibms_01} cell volt 19"
+    #   name: "${jkibms_01} cell voltage 19"
     # cell_voltage_20:
-    #   name: "${jkibms_01} cell volt 20"
+    #   name: "${jkibms_01} cell voltage 20"
     # cell_voltage_21:
-    #   name: "${jkibms_01} cell volt 21"
+    #   name: "${jkibms_01} cell voltage 21"
     # cell_voltage_22:
-    #   name: "${jkibms_01} cell volt 22"
+    #   name: "${jkibms_01} cell voltage 22"
     # cell_voltage_23:
-    #   name: "${jkibms_01} cell volt 23"
+    #   name: "${jkibms_01} cell voltage 23"
     # cell_voltage_24:
-    #   name: "${jkibms_01} cell volt 24"
+    #   name: "${jkibms_01} cell voltage 24"
     cell_resistance_01:
-      name: "${jkibms_01} cell resist 01"
+      name: "${jkibms_01} cell resistance 01"
     cell_resistance_02:
-      name: "${jkibms_01} cell resist 02"
+      name: "${jkibms_01} cell resistance 02"
     cell_resistance_03:
-      name: "${jkibms_01} cell resist 03"
+      name: "${jkibms_01} cell resistance 03"
     cell_resistance_04:
-      name: "${jkibms_01} cell resist 04"
+      name: "${jkibms_01} cell resistance 04"
     cell_resistance_05:
-      name: "${jkibms_01} cell resist 05"
+      name: "${jkibms_01} cell resistance 05"
     cell_resistance_06:
-      name: "${jkibms_01} cell resist 06"
+      name: "${jkibms_01} cell resistance 06"
     cell_resistance_07:
-      name: "${jkibms_01} cell resist 07"
+      name: "${jkibms_01} cell resistance 07"
     cell_resistance_08:
-      name: "${jkibms_01} cell resist 08"
+      name: "${jkibms_01} cell resistance 08"
     cell_resistance_09:
-      name: "${jkibms_01} cell resist 09"
+      name: "${jkibms_01} cell resistance 09"
     cell_resistance_10:
-      name: "${jkibms_01} cell resist 10"
+      name: "${jkibms_01} cell resistance 10"
     cell_resistance_11:
-      name: "${jkibms_01} cell resist 11"
+      name: "${jkibms_01} cell resistance 11"
     cell_resistance_12:
-      name: "${jkibms_01} cell resist 12"
+      name: "${jkibms_01} cell resistance 12"
     cell_resistance_13:
-      name: "${jkibms_01} cell resist 13"
+      name: "${jkibms_01} cell resistance 13"
     cell_resistance_14:
-      name: "${jkibms_01} cell resist 14"
+      name: "${jkibms_01} cell resistance 14"
     cell_resistance_15:
-      name: "${jkibms_01} cell resist 15"
+      name: "${jkibms_01} cell resistance 15"
     cell_resistance_16:
-      name: "${jkibms_01} cell resist 16"
+      name: "${jkibms_01} cell resistance 16"
     # cell_resistance_17:
-    #   name: "${jkibms_01} cell resist 17"
+    #   name: "${jkibms_01} cell resistance 17"
     # cell_resistance_18:
-    #   name: "${jkibms_01} cell resist 18"
+    #   name: "${jkibms_01} cell resistance 18"
     # cell_resistance_19:
-    #   name: "${jkibms_01} cell resist 19"
+    #   name: "${jkibms_01} cell resistance 19"
     # cell_resistance_20:
-    #   name: "${jkibms_01} cell resist 20"
+    #   name: "${jkibms_01} cell resistance 20"
     # cell_resistance_21:
-    #   name: "${jkibms_01} cell resist 21"
+    #   name: "${jkibms_01} cell resistance 21"
     # cell_resistance_22:
-    #   name: "${jkibms_01} cell resist 22"
+    #   name: "${jkibms_01} cell resistance 22"
     # cell_resistance_23:
-    #   name: "${jkibms_01} cell resist 23"
+    #   name: "${jkibms_01} cell resistance 23"
     # cell_resistance_24:
-    #   name: "${jkibms_01} cell resist 24"
+    #   name: "${jkibms_01} cell resistance 24"
     battery_voltage:
-      name: "${jkibms_01} bat volt"
+      name: "${jkibms_01} bat voltage"
     battery_current:
       name: "${jkibms_01} bat current"
     battery_power:
@@ -657,17 +591,17 @@ sensor:
     battery_power_discharging:                                  
       name: "${jkibms_01} bat power discharging"
     temperature_sensor_1:
-      name: "${jkibms_01} temp sensor 1"
+      name: "${jkibms_01} temperature sensor 1"
     temperature_sensor_2:
-      name: "${jkibms_01} temp sensor 2"
+      name: "${jkibms_01} temperature sensor 2"
     temperature_sensor_3:
-      name: "${jkibms_01} temp sensor 3"
+      name: "${jkibms_01} temperature sensor 3"
     temperature_sensor_4:
-      name: "${jkibms_01} temp sensor 4"
+      name: "${jkibms_01} temperature sensor 4"
     temperature_sensor_5:
-      name: "${jkibms_01} temp sensor 5"
+      name: "${jkibms_01} temperature sensor 5"
     temperature_powertube:
-      name: "${jkibms_01} temp powertube"
+      name: "${jkibms_01} temperature powertube"
     battery_capacity_state_of_charge:
       name: "${jkibms_01} bat capacity state of charge"
     battery_capacity_remaining:
@@ -676,7 +610,7 @@ sensor:
       name: "${jkibms_01} charging cycles"
     battery_capacity_total_charging_cycle:
       name: "${jkibms_01} bat capacity total charging cycle"
-    battery_total_runtime:
+    battery_total_runtime:                                                            
       name: "${jkibms_01} bat total runtime"
     balancing_current:
       name: "${jkibms_01} balancing current"
@@ -686,19 +620,19 @@ sensor:
       name: "${jkibms_01} cell count real"
     smart_sleep_time:
       name: "${jkibms_01} smart sleep time"
-    powertube_temperature_protection:
-      name: "${jkibms_01} powertube temp protection" 
-    powertube_temperature_protection_recovery:
-      name: "${jkibms_01} powertube temp protection recovery"  
+    powertube_temperature_protection:                                                 
+      name: "${jkibms_01} powertube temperature protection" 
+    powertube_temperature_protection_recovery:                                        
+      name: "${jkibms_01} powertube temperature protection recovery"  
     battery_total_alarms_count:     
       name: "${jkibms_01} bat total alarms count"  
     battery_total_alarms_active:     
       name: "${jkibms_01} bat total alarms active"  
     emergency_time_countdown:
       name: "${jkibms_01} emergency time countdown"      
-    uart1_protocol_number:
+    uart1_protocol_number:                                                         
       name: "${jkibms_01} uart1 protocol number"
-    uart2_protocol_number:
+    uart2_protocol_number:                                                         
       name: "${jkibms_01} uart2 protocol number"      
     battery_soh_valuation:    
       name: "${jkibms_01} bat soh valuation"
@@ -715,129 +649,128 @@ sensor:
     cell_overvoltage_protection_release_time:    
       name: "${jkibms_01} cell overvolt protection release time"
 
-
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     balancing_direction:
       name: "${jkibms_02} balancing direction"
     cell_voltage_min:
-      name: "${jkibms_02} cell volt min"
+      name: "${jkibms_02} cell voltage min"
     cell_voltage_max:
-      name: "${jkibms_02} cell volt max"
+      name: "${jkibms_02} cell voltage max"
     cell_voltage_min_cell_number:
-      name: "${jkibms_02} cell volt min cell number"
+      name: "${jkibms_02} cell voltage min cell number"
     cell_voltage_max_cell_number:
-      name: "${jkibms_02} cell volt max cell number"
+      name: "${jkibms_02} cell voltage max cell number"
     cell_delta_voltage:
-      name: "${jkibms_02} cell delta volt"
+      name: "${jkibms_02} cell delta voltage"
     cell_average_voltage:
-      name: "${jkibms_02} cell average volt"
+      name: "${jkibms_02} cell average voltage"
     cell_resistance_min:
-      name: "${jkibms_02} cell resist min"
+      name: "${jkibms_02} cell resistance min"               
     cell_resistance_max:
-      name: "${jkibms_02} cell resist max"               
+      name: "${jkibms_02} cell resistance max"               
     cell_resistance_min_cell_number:
-      name: "${jkibms_02} cell resist min cell number"   
+      name: "${jkibms_02} cell resistance min cell number"   
     cell_resistance_max_cell_number:
-      name: "${jkibms_02} cell resist max cell number"   
+      name: "${jkibms_02} cell resistance max cell number"   
     cell_voltage_01:
-      name: "${jkibms_02} cell volt 01"
+      name: "${jkibms_02} cell voltage 01"
     cell_voltage_02:
-      name: "${jkibms_02} cell volt 02"
+      name: "${jkibms_02} cell voltage 02"
     cell_voltage_03:
-      name: "${jkibms_02} cell volt 03"
+      name: "${jkibms_02} cell voltage 03"
     cell_voltage_04:
-      name: "${jkibms_02} cell volt 04"
+      name: "${jkibms_02} cell voltage 04"
     cell_voltage_05:
-      name: "${jkibms_02} cell volt 05"
+      name: "${jkibms_02} cell voltage 05"
     cell_voltage_06:
-      name: "${jkibms_02} cell volt 06"
+      name: "${jkibms_02} cell voltage 06"
     cell_voltage_07:
-      name: "${jkibms_02} cell volt 07"
+      name: "${jkibms_02} cell voltage 07"
     cell_voltage_08:
-      name: "${jkibms_02} cell volt 08"
+      name: "${jkibms_02} cell voltage 08"
     cell_voltage_09:
-      name: "${jkibms_02} cell volt 09"
+      name: "${jkibms_02} cell voltage 09"
     cell_voltage_10:
-      name: "${jkibms_02} cell volt 10"
+      name: "${jkibms_02} cell voltage 10"
     cell_voltage_11:
-      name: "${jkibms_02} cell volt 11"
+      name: "${jkibms_02} cell voltage 11"
     cell_voltage_12:
-      name: "${jkibms_02} cell volt 12"
+      name: "${jkibms_02} cell voltage 12"
     cell_voltage_13:
-      name: "${jkibms_02} cell volt 13"
+      name: "${jkibms_02} cell voltage 13"
     cell_voltage_14:
-      name: "${jkibms_02} cell volt 14"
+      name: "${jkibms_02} cell voltage 14"
     cell_voltage_15:
-      name: "${jkibms_02} cell volt 15"
+      name: "${jkibms_02} cell voltage 15"
     cell_voltage_16:
-      name: "${jkibms_02} cell volt 16"
+      name: "${jkibms_02} cell voltage 16"
     # cell_voltage_17:
-    #   name: "${jkibms_02} cell volt 17"
+    #   name: "${jkibms_02} cell voltage 17"
     # cell_voltage_18:
-    #   name: "${jkibms_02} cell volt 18"
+    #   name: "${jkibms_02} cell voltage 18"
     # cell_voltage_19:
-    #   name: "${jkibms_02} cell volt 19"
+    #   name: "${jkibms_02} cell voltage 19"
     # cell_voltage_20:
-    #   name: "${jkibms_02} cell volt 20"
+    #   name: "${jkibms_02} cell voltage 20"
     # cell_voltage_21:
-    #   name: "${jkibms_02} cell volt 21"
+    #   name: "${jkibms_02} cell voltage 21"
     # cell_voltage_22:
-    #   name: "${jkibms_02} cell volt 22"
+    #   name: "${jkibms_02} cell voltage 22"
     # cell_voltage_23:
-    #   name: "${jkibms_02} cell volt 23"
+    #   name: "${jkibms_02} cell voltage 23"
     # cell_voltage_24:
-    #   name: "${jkibms_02} cell volt 24"
+    #   name: "${jkibms_02} cell voltage 24"
     cell_resistance_01:
-      name: "${jkibms_02} cell resist 01"
+      name: "${jkibms_02} cell resistance 01"
     cell_resistance_02:
-      name: "${jkibms_02} cell resist 02"
+      name: "${jkibms_02} cell resistance 02"
     cell_resistance_03:
-      name: "${jkibms_02} cell resist 03"
+      name: "${jkibms_02} cell resistance 03"
     cell_resistance_04:
-      name: "${jkibms_02} cell resist 04"
+      name: "${jkibms_02} cell resistance 04"
     cell_resistance_05:
-      name: "${jkibms_02} cell resist 05"
+      name: "${jkibms_02} cell resistance 05"
     cell_resistance_06:
-      name: "${jkibms_02} cell resist 06"
+      name: "${jkibms_02} cell resistance 06"
     cell_resistance_07:
-      name: "${jkibms_02} cell resist 07"
+      name: "${jkibms_02} cell resistance 07"
     cell_resistance_08:
-      name: "${jkibms_02} cell resist 08"
+      name: "${jkibms_02} cell resistance 08"
     cell_resistance_09:
-      name: "${jkibms_02} cell resist 09"
+      name: "${jkibms_02} cell resistance 09"
     cell_resistance_10:
-      name: "${jkibms_02} cell resist 10"
+      name: "${jkibms_02} cell resistance 10"
     cell_resistance_11:
-      name: "${jkibms_02} cell resist 11"
+      name: "${jkibms_02} cell resistance 11"
     cell_resistance_12:
-      name: "${jkibms_02} cell resist 12"
+      name: "${jkibms_02} cell resistance 12"
     cell_resistance_13:
-      name: "${jkibms_02} cell resist 13"
+      name: "${jkibms_02} cell resistance 13"
     cell_resistance_14:
-      name: "${jkibms_02} cell resist 14"
+      name: "${jkibms_02} cell resistance 14"
     cell_resistance_15:
-      name: "${jkibms_02} cell resist 15"
+      name: "${jkibms_02} cell resistance 15"
     cell_resistance_16:
-      name: "${jkibms_02} cell resist 16"
+      name: "${jkibms_02} cell resistance 16"
     # cell_resistance_17:
-    #   name: "${jkibms_02} cell resist 17"
+    #   name: "${jkibms_02} cell resistance 17"
     # cell_resistance_18:
-    #   name: "${jkibms_02} cell resist 18"
+    #   name: "${jkibms_02} cell resistance 18"
     # cell_resistance_19:
-    #   name: "${jkibms_02} cell resist 19"
+    #   name: "${jkibms_02} cell resistance 19"
     # cell_resistance_20:
-    #   name: "${jkibms_02} cell resist 20"
+    #   name: "${jkibms_02} cell resistance 20"
     # cell_resistance_21:
-    #   name: "${jkibms_02} cell resist 21"
+    #   name: "${jkibms_02} cell resistance 21"
     # cell_resistance_22:
-    #   name: "${jkibms_02} cell resist 22"
+    #   name: "${jkibms_02} cell resistance 22"
     # cell_resistance_23:
-    #   name: "${jkibms_02} cell resist 23"
+    #   name: "${jkibms_02} cell resistance 23"
     # cell_resistance_24:
-    #   name: "${jkibms_02} cell resist 24"
+    #   name: "${jkibms_02} cell resistance 24"
     battery_voltage:
-      name: "${jkibms_02} bat volt"
+      name: "${jkibms_02} bat voltage"
     battery_current:
       name: "${jkibms_02} bat current"
     battery_power:
@@ -847,17 +780,17 @@ sensor:
     battery_power_discharging:
       name: "${jkibms_02} bat power discharging"
     temperature_sensor_1:
-      name: "${jkibms_02} temp sensor 1"
+      name: "${jkibms_02} temperature sensor 1"
     temperature_sensor_2:
-      name: "${jkibms_02} temp sensor 2"
+      name: "${jkibms_02} temperature sensor 2"
     temperature_sensor_3:
-      name: "${jkibms_02} temp sensor 3"
+      name: "${jkibms_02} temperature sensor 3"
     temperature_sensor_4:
-      name: "${jkibms_02} temp sensor 4"
+      name: "${jkibms_02} temperature sensor 4"
     temperature_sensor_5:
-      name: "${jkibms_02} temp sensor 5"
+      name: "${jkibms_02} temperature sensor 5"
     temperature_powertube:
-      name: "${jkibms_02} temp powertube"
+      name: "${jkibms_02} temperature powertube"
     battery_capacity_state_of_charge:
       name: "${jkibms_02} bat capacity state of charge"
     battery_capacity_remaining:
@@ -877,9 +810,9 @@ sensor:
     smart_sleep_time:
       name: "${jkibms_02} smart sleep time"
     powertube_temperature_protection:
-      name: "${jkibms_02} powertube temp protection" 
+      name: "${jkibms_02} powertube temperature protection" 
     powertube_temperature_protection_recovery:
-      name: "${jkibms_02} powertube temp protection recovery"  
+      name: "${jkibms_02} powertube temperature protection recovery"  
     battery_total_alarms_count:     
       name: "${jkibms_02} bat total alarms count"  
     battery_total_alarms_active:     
@@ -909,9 +842,7 @@ sensor:
     jk_rs485_bms_id: bms3
     balancing_direction:
       name: "${jkibms_03} balancing direction"
-    .
-    .
-    .
+
 
 # ###################################################
 # SWITCH
@@ -932,7 +863,7 @@ switch:
 
     # JK-01 SWITCH
     # ###################################################    
-
+  
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms1
     precharging:
@@ -954,7 +885,7 @@ switch:
     timed_stored_data:
       name: "${jkibms_01} timed stored data"
     disable_temperature_sensors:
-      name: "${jkibms_01} disable temp sensors"
+      name: "${jkibms_01} disable temperature sensors"
     smart_sleep_on:
       name: "${jkibms_01} smart sleep on"
     disable_pcl_module:
@@ -965,7 +896,7 @@ switch:
       name: "${jkibms_01} port selection"
     special_charger:
       name: "${jkibms_01} special charger" 
-
+   
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     precharging:
@@ -987,7 +918,7 @@ switch:
     timed_stored_data:
       name: "${jkibms_02} timed stored data"
     disable_temperature_sensors:
-      name: "${jkibms_02} disable temp sensors"
+      name: "${jkibms_02} disable temperature sensors"
     smart_sleep_on:
       name: "${jkibms_02} smart sleep on"
     disable_pcl_module:
@@ -1003,9 +934,6 @@ switch:
     jk_rs485_bms_id: bms3
     precharging:
       name: "${jkibms_03} precharging"
-    .
-    .
-    .
 
 # ###################################################
 # TEXT
@@ -1042,7 +970,7 @@ text_sensor:
       name: "${jkibms_01} info device serial number" 
     info_device_setup_passcode:
       name: "${jkibms_01} info device setup passcode"  
-
+      
   - platform: jk_rs485_bms
     jk_rs485_bms_id: bms2
     errors:
@@ -1069,11 +997,11 @@ text_sensor:
       name: "${jkibms_02} info device serial number" 
     info_device_setup_passcode:
       name: "${jkibms_02} info device setup passcode"  
-      
+
   - platform: jk_rs485_bms
-    jk_rs485_bms_id: bms3
+    jk_rs485_bms_id: bms2
     errors:
-      name: "${jkibms_03} errors"
+      name: "${jkibms_02} errors"
     .
     .
     .
