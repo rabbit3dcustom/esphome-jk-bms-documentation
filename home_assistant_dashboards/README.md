@@ -16,9 +16,9 @@ Give the opportunity to the community to see other examples of home assistant da
 ## Stock
 This dashboard is inherited from syssi component and modified from the txubelatxu component that was a little messy.
 
-![ScreenShot 01](home_assistant_dashboards/images/dashboard_JKBms_System_01.png)
-![ScreenShot 02](home_assistant_dashboards/images/dashboard_JKBms_System_02.png)
-![ScreenShot 03](home_assistant_dashboards/images/dashboard_JKBms_System_03.png)
+<img width="397" height="221" alt="dashboard_JKBms_System_01" src="https://github.com/user-attachments/assets/9223e704-dd91-4930-889b-7338cf609da5" />
+<img width="397" height="221" alt="dashboard_JKBms_System_02" src="https://github.com/user-attachments/assets/4ee93991-5003-4706-910f-859bf11ca474" />
+<img width="397" height="221" alt="dashboard_JKBms_System_03" src="https://github.com/user-attachments/assets/fb84bd4a-075e-4c4c-84e5-63722fdbecf5" />
 
 ### Requirements
 No
@@ -29,9 +29,10 @@ No
 ## Battery Rack
 This dashboard is made by myself, having in mind the setup of my future four batteries in a shelf or rack. It mimic the physical position of each battery.
 
-![ScreenShot 01](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_01.png)
-![ScreenShot 02](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_02.png)
-![ScreenShot 03](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_03.png)
+<img width="397" height="221" alt="dashboard_JKBms_battery_rack_01" src="https://github.com/user-attachments/assets/b0ea12d4-adb4-487c-b59c-c2b6e72f326b" />
+<img width="397" height="221" alt="dashboard_JKBms_battery_rack_03" src="https://github.com/user-attachments/assets/6b74835e-67ce-4427-95cd-72cafb8c29a1" />
+<img width="397" height="221" alt="dashboard_JKBms_battery_rack_02" src="https://github.com/user-attachments/assets/9214bebf-548d-4a1c-8a3b-6facce303136" />
+
 
 ### Requirements
 You need to install via hacks or integrations the following:
