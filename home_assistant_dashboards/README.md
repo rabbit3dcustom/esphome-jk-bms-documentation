@@ -1,4 +1,4 @@
-# DASBOARDS FOR HOME ASSISTANT
+# DASHBOARDS FOR HOME ASSISTANT
 Welcome! 
 
 Here you will find at least two dashboards for home assisant, used to watch and monitor your JKBms.
