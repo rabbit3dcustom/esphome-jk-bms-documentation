@@ -1,0 +1,2128 @@
+views:
+  - title: Battery Rack
+    cards:
+      - type: custom:text-divider-row
+        text: Navigation
+      - square: false
+        type: grid
+        columns: 5
+        cards:
+          - type: custom:button-card
+            name: Home
+            label: Home
+            styles:
+              card:
+                - height: 30px
+                - width: 30px
+              name:
+                - font-size: 8px
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-consumption/ss-main
+          - type: custom:button-card
+            name: Rack
+            label: Rack
+            styles:
+              card:
+                - height: 50px
+                - width: 50px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-rack
+          - type: custom:button-card
+            name: Statistics
+            label: Statistics
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-statistics
+          - type: custom:button-card
+            name: Management
+            label: Management
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-management
+      - type: horizontal-stack
+        cards:
+          - type: custom:text-divider-row
+            text: Battery dashboard
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: sensor.template_jkbms_pb_average_live_soc
+                name: SOC
+                content_info: state
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: sensor.template_jkbms_pb_total_live_remaining_capacity
+                name: Remaining capacity
+                content_info: state
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: sensor.template_jkbms_pb_total_live_amps
+                name: Total Amps
+                content_info: state
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: sensor.template_jkbms_pb_total_live_watts
+                name: Total Power
+                content_info: state
+          - type: custom:mushroom-chips-card
+            chips:
+              - type: entity
+                entity: sensor.esp32_jk_bms_hub_rs485_01_uptime
+                tap_action:
+                  action: more-info
+                hold_action:
+                  action: more-info
+                double_tap_action:
+                  action: more-info
+      - type: horizontal-stack
+        cards:
+          - type: custom:text-divider-row
+            text: Batteries Management
+      - square: false
+        type: grid
+        cards:
+          - square: false
+            type: grid
+            cards: []
+            columns: 1
+            title: jk_bms_3
+          - square: false
+            title: jk_bms_1
+            type: grid
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_volt
+                            name: Voltage
+                            content_info: state
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_current
+                            name: Curr
+                            content_info: state
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              number.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_capacity_total_settings
+                        name: Total Ah
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_total_runtime_formatted
+                            name: Running
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_cycles
+                            name: Cycles
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_capacity_total_charging_cycle
+                            name: Cycle capacity
+              - type: horizontal-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_power
+                            name: Pow
+                            content_info: state
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_capacity_remaining
+                            name: Remaining
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-entity-card
+                        entity: >-
+                          sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_capacity_state_of_charge
+                        name: SOC
+                        layout: horizontal
+                        primary_info: state
+                        secondary_info: name
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.snzb_02p_04_thermometr_battery01_temperature
+                        name: Temp.
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: sensor.snzb_02p_04_thermometr_battery01_humidity
+                        name: Humid.
+              - type: horizontal-stack
+                cards:
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number
+                                name: Cell Min Volt
+                          - type: custom:mushroom-template-card
+                            primary: >-
+                              {% set cell_number =
+                              states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number')
+                              | int %} {% if cell_number < 10 %} {% set
+                              cell_string = cell_number | string %} {% set
+                              cell_format = "0" + cell_string  %} {% endif %} {%
+                              set volts_cell =
+                              'sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_' 
+                              %} {% set join =volts_cell+cell_format %}
+                              {{states(join)|float|round(3)}}v
+                            secondary: ''
+                            icon: ''
+                            layout: horizontal
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number
+                                name: Cell Max Volt
+                          - type: custom:mushroom-template-card
+                            primary: >-
+                              {% set cell_number =
+                              states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number')
+                              | int %} {% if cell_number < 10 %} {% set
+                              cell_string = cell_number | string %} {% set
+                              cell_format = "0" + cell_string  %} {% endif %} {%
+                              set volts_cell =
+                              'sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_' 
+                              %} {% set join =volts_cell+cell_format %}
+                              {{states(join)|float|round(3)}}v
+                            secondary: ''
+                            icon: ''
+                            layout: horizontal
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing_current
+                                name: Balance Amp
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_delta_volt
+                                name: Cell Delta Volt
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_balancing_starting_volt
+                                name: Start Balance
+                                icon: mdi:scale-balance
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing
+                                name: Balancing
+                                icon: mdi:scale-balance
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_powertube
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_sensor_1
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_sensor_2
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_sensor_3
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_sensor_4
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_temp_sensor_5
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging')}}
+                    secondary: Charge
+                    icon: mdi:battery-charging-100
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging
+                    icon_color: >-
+                      {% if
+                      (states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging')=='off')
+                      %}
+                        red                    
+                      {% else %}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_status_charging')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging')}}
+                    secondary: Discharge
+                    icon: mdi:battery-charging-10
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging
+                    icon_color: >-
+                      {% if
+                      (states('esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging')=='off')
+                      %}
+                        red                    
+                      {% else %}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_status_discharging')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }                    
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing')}}
+                    secondary: >-
+                      {% if
+                      (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_status_balancing')=='on'
+                      ) %}
+                        Balancer running
+                      {% elif 'off' %}
+                        Balancer idle  
+                      {% endif %} 
+                    icon: mdi:seesaw
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing
+                    icon_color: >-
+                      {% if
+                      (states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing')=='off')
+                      %}
+                        red                    
+                      {%else%}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_status_balancing')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }                        
+              - type: vertical-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_01
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 1 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 1 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_01') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange;                      
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_02
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 2 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 2 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_02') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_03
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 3 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 3 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_03') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_04
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 4 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 4 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_04') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_05
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 5 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 5 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_05') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_06
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 6 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 6 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_06') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_07
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 7 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 7 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_07') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_08
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 8 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 8 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_08') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_09
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 9 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 9 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_09') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_10
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 10 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 10 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_10') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_11
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 11 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 11 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_11') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_12
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 12 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 12 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_12') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_13
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 13 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 13 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_13') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_14
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 14 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 14 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_14') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_15
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 15 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 15 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_15') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_16
+                            icon: null
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_max_cell_number') | int == 16 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_min_cell_number') | int == 16 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_16') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }
+            columns: 1
+          - square: false
+            type: grid
+            cards: []
+            columns: 1
+            title: jk_bms_4
+          - square: false
+            title: jk_bms_2
+            type: grid
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_volt
+                            name: Voltage
+                            content_info: state
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_current
+                            name: Curr
+                            content_info: state
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              number.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_capacity_total_settings
+                        name: Total Ah
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_total_runtime_formatted
+                            name: Running
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_cycles
+                            name: Cycles
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_capacity_total_charging_cycle
+                            name: Cycle capacity
+              - type: horizontal-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_power
+                            name: Pow
+                            content_info: state
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_capacity_remaining
+                            name: Remaining
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-entity-card
+                        entity: >-
+                          sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_capacity_state_of_charge
+                        name: SOC
+                        layout: horizontal
+                        primary_info: state
+                        secondary_info: name
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.snzb_02p_07_thermometr_battery02_temperature
+                        name: Temp.
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: sensor.snzb_02p_07_thermometr_battery02_humidity
+                        name: Humid.
+              - type: horizontal-stack
+                cards:
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number
+                                name: Cell Min Volt
+                          - type: custom:mushroom-template-card
+                            primary: >-
+                              {% set cell_number =
+                              states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number')
+                              | int %} {% if cell_number < 10 %} {% set
+                              cell_string = cell_number | string %} {% set
+                              cell_format = "0" + cell_string  %} {% endif %} {%
+                              set volts_cell =
+                              'sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_' 
+                              %} {% set join =volts_cell+cell_format %}
+                              {{states(join)|float|round(3)}}v
+                            secondary: ''
+                            icon: ''
+                            layout: horizontal
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number
+                                name: Cell Max Volt
+                          - type: custom:mushroom-template-card
+                            primary: >-
+                              {% set cell_number =
+                              states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number')
+                              | int %} {% if cell_number < 10 %} {% set
+                              cell_string = cell_number | string %} {% set
+                              cell_format = "0" + cell_string  %} {% endif %} {%
+                              set volts_cell =
+                              'sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_' 
+                              %} {% set join =volts_cell+cell_format %}
+                              {{states(join)|float|round(3)}}v
+                            secondary: ''
+                            icon: ''
+                            layout: horizontal
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing_current
+                                name: Balance Amp
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_delta_volt
+                                name: Cell Delta Volt
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_balancing_starting_volt
+                                name: Start Balance
+                                icon: mdi:scale-balance
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing
+                                name: Balancing
+                                icon: mdi:scale-balance
+                  - type: custom:vertical-stack-in-card
+                    cards:
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_powertube
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_sensor_1
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_sensor_2
+                      - type: horizontal-stack
+                        cards:
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_sensor_3
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_sensor_4
+                          - type: custom:mushroom-chips-card
+                            chips:
+                              - type: entity
+                                entity: >-
+                                  sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_temp_sensor_5
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging')}}
+                    secondary: Charge
+                    icon: mdi:battery-charging-100
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging
+                    icon_color: >-
+                      {% if
+                      (states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging')=='off')
+                      %}
+                        red                    
+                      {% else %}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_status_charging')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging')}}
+                    secondary: Discharge
+                    icon: mdi:battery-charging-10
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging
+                    icon_color: >-
+                      {% if
+                      (states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging')=='off')
+                      %}
+                        red                    
+                      {% else %}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_status_discharging')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }                    
+                  - type: custom:mushroom-template-card
+                    primary: >-
+                      {{states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing')}}
+                    secondary: >-
+                      {% if
+                      (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_status_balancing')=='on'
+                      ) %}
+                        Balancer running
+                      {% elif 'off' %}
+                        Balancer idle  
+                      {% endif %}
+                    icon: mdi:seesaw
+                    entity: switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing
+                    icon_color: >-
+                      {% if
+                      (states('switch.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing')=='off')
+                      %}
+                        red                    
+                      {%else%}
+                        {% if (states('binary_sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_status_balancing')=='on' ) %}
+                          green
+                        {% elif 'off' %}
+                          orange  
+                        {% endif %} 
+                      {% endif %} 
+                    tap_action:
+                      action: more-info
+                    card_mod:
+                      style:
+                        mushroom-card: |
+                          :host {
+                            --mush-icon-size: 20px;       
+                            }                        
+              - type: vertical-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_01
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 1 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 1 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_01') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange;                      
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_02
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 2 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 2 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_02') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_03
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 3 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 3 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_03') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_04
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 4 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 4 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_04') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_05
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 5 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 5 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_05') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_06
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 6 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 6 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_06') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_07
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 7 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 7 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_07') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_08
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 8 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 8 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_08') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                  - type: horizontal-stack
+                    cards:
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_09
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 9 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 9 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_09') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_10
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 10 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 10 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_10') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_11
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 11 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 11 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_11') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_12
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 12 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 12 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_12') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_13
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 13 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 13 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_13') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_14
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 14 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 14 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_14') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_15
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 15 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 15 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_15') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }                
+                      - type: custom:mushroom-chips-card
+                        chips:
+                          - type: entity
+                            entity: >-
+                              sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_16
+                            tap_action:
+                              action: more-info
+                            hold_action:
+                              action: more-info
+                            double_tap_action:
+                              action: more-info
+                            card_mod:
+                              style: |
+                                ha-card {
+                                  {% if states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_max_cell_number') | int == 16 %}
+                                    --primary-text-color: blue;
+                                    --text-color: blue;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_min_cell_number') | int == 16 %}                      
+                                    --primary-text-color: red;
+                                    --text-color: red;
+                                  {% elif states('sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_16') | float > 3.50 %}                      
+                                    --primary-text-color: orange;
+                                    --text-color: orange; 
+                                  {% else %}
+                                    --primary-text-color: ff;
+                                    --text-color: ff;
+                                  {% endif %}
+                                }
+            columns: 1
+        columns: 2
+    icon: mdi:library-shelves
+    layout:
+      width: 100%
+    type: custom:grid-layout
+    subview: false
+    path: br-battery-rack
+  - type: custom:grid-layout
+    path: br-battery-statistics
+    title: Battery statistics
+    icon: mdi:ev-station
+    cards:
+      - type: custom:text-divider-row
+        text: Navigation
+      - square: false
+        type: grid
+        columns: 5
+        cards:
+          - type: custom:button-card
+            name: Home
+            label: Home
+            styles:
+              card:
+                - height: 30px
+                - width: 30px
+              name:
+                - font-size: 8px
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-consumption/ss-main
+          - type: custom:button-card
+            name: Rack
+            label: Rack
+            styles:
+              card:
+                - height: 50px
+                - width: 50px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-rack
+          - type: custom:button-card
+            name: Statistics
+            label: Statistics
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-statistics
+          - type: custom:button-card
+            name: Management
+            label: Management
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-management
+      - type: horizontal-stack
+        cards:
+          - type: custom:text-divider-row
+            text: Battery 01 in
+          - type: custom:text-divider-row
+            text: Battery 02 in
+      - type: horizontal-stack
+        cards:
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_charge_watts_dailyconsumption
+                        name: JKBMS-PB 01 live charge watts-DailyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_charge_watts_weeklyconsumption
+                        name: JKBMS-PB 01 live charge watts-WeeklyConsumption
+                        content_info: state
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_charge_watts_monthlyconsumption
+                        name: JKBMS-PB 01 live charge watts-MonthlyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_charge_watts_yearlyconsumption
+                        name: JKBMS-PB 01 live charge watts-YearlyConsumption
+                        content_info: state
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_charge_watts_dailyconsumption
+                        name: JKBMS-PB 02 live charge watts-DailyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_charge_watts_weeklyconsumption
+                        name: JKBMS-PB 02 live charge watts-WeeklyConsumption
+                        content_info: state
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_charge_watts_monthlyconsumption
+                        name: JKBMS-PB 02 live charge watts-MonthlyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_charge_watts_yearlyconsumption
+                        name: JKBMS-PB 02 live charge watts-YearlyConsumption
+                        content_info: state
+      - type: horizontal-stack
+        cards:
+          - type: custom:text-divider-row
+            text: Battery 01 out
+          - type: custom:text-divider-row
+            text: Battery 02 out
+      - type: horizontal-stack
+        cards:
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_discharge_watts_dailyconsumption
+                        name: JKBMS-PB 01 live discharge watts-DailyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_discharge_watts_weeklyconsumption
+                        name: JKBMS-PB 01 live discharge watts-WeeklyConsumption
+                        content_info: state
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_discharge_watts_monthlyconsumption
+                        name: JKBMS-PB 01 live discharge watts-MonthlyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_01_live_discharge_watts_yearlyconsumption
+                        name: JKBMS-PB 01 live discharge watts-YearlyConsumption
+                        content_info: state
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_discharge_watts_dailyconsumption
+                        name: JKBMS-PB 02 live discharge watts-DailyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_discharge_watts_weeklyconsumption
+                        name: JKBMS-PB 02 live discharge watts-WeeklyConsumption
+                        content_info: state
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_discharge_watts_monthlyconsumption
+                        name: JKBMS-PB 02 live discharge watts-MonthlyConsumption
+                        content_info: state
+                  - type: custom:mushroom-chips-card
+                    chips:
+                      - type: entity
+                        entity: >-
+                          sensor.util_meter_jkbms_pb_02_live_discharge_watts_yearlyconsumption
+                        name: JKBMS-PB 02 live discharge watts-YearlyConsumption
+                        content_info: state
+      - title: Battery 01
+        type: history-graph
+        entities:
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_01
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_02
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_03
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_04
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_05
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_06
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_07
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_08
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_09
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_10
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_11
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_12
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_13
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_14
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_15
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_volt_16
+        hours_to_show: 16
+      - title: Battery 2
+        type: history-graph
+        entities:
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_01
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_02
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_03
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_04
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_05
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_06
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_07
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_08
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_09
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_10
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_11
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_12
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_13
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_14
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_15
+          - sensor.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_volt_16
+        hours_to_show: 16
+    subview: true
+  - type: custom:grid-layout
+    title: Battery Management
+    path: br-battery-management
+    icon: mdi:battery-check
+    subview: true
+    cards:
+      - type: custom:text-divider-row
+        text: Navigation
+      - square: false
+        type: grid
+        columns: 5
+        cards:
+          - type: custom:button-card
+            name: Home
+            label: Home
+            styles:
+              card:
+                - height: 30px
+                - width: 30px
+              name:
+                - font-size: 8px
+            tap_action:
+              action: navigate
+              navigation_path: /dashboard-consumption/ss-main
+          - type: custom:button-card
+            name: Rack
+            label: Rack
+            styles:
+              card:
+                - height: 50px
+                - width: 50px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-rack
+          - type: custom:button-card
+            name: Statistics
+            label: Statistics
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-statistics
+          - type: custom:button-card
+            name: Management
+            label: Management
+            styles:
+              card:
+                - height: 50px
+                - width: 70px
+              name:
+                - font-size: 11px
+            tap_action:
+              action: navigate
+              navigation_path: br-battery-management
+      - square: false
+        type: grid
+        cards:
+          - square: false
+            type: grid
+            cards: []
+            columns: 1
+            title: jk_bms_3
+          - square: false
+            title: jk_bms_1
+            type: grid
+            cards:
+              - type: custom:love-lock-card
+                title: Password protected
+                popup: password
+                password: '123456'
+                cards:
+                  - type: entities
+                    entities:
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_bat_capacity_total_settings
+                        name: capacity_total_settings
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_balancing_trigger_volt
+                        name: balancing_trigger_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_balancing_starting_volt
+                        name: balancing_starting_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_max_balancing_current
+                        name: max_balance_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_count_settings
+                        name: cell_count_settings
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_overvolt_protection
+                        name: cell_overvolt_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_overvolt_protection_recovery
+                        name: overvolt_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_power_off_volt
+                        name: cell_power_off_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_request_charge_volt
+                        name: cell_request_charge_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_request_charge_volt_time
+                        name: cell_request_charge_volt_time
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_request_float_volt
+                        name: cell_request_float_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_request_float_volt_time
+                        name: cell_request_float_volt_time
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_smart_sleep_volt
+                        name: cell_smart_sleep_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_soc0_volt
+                        name: cell_soc0_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_soc100_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_undervolt_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_cell_undervolt_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_lowtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_lowtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_overcurrent_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_overcurrent_protection_recovery_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_charging_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging_overcurrent_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging_overcurrent_protection_recovery_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_discharging_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_max_charge_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_max_discharge_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_mos_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_mos_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_precharging_time_from_discharge
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_short_circuit_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_1_short_circuit_protection_recovery_delay
+            columns: 1
+          - square: false
+            type: grid
+            cards: []
+            columns: 1
+            title: jk_bms_4
+          - square: false
+            title: jk_bms_2
+            type: grid
+            cards:
+              - type: custom:love-lock-card
+                title: Password protected
+                popup: password
+                password: '123456'
+                cards:
+                  - type: entities
+                    entities:
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_bat_capacity_total_settings
+                        name: capacity_total_settings
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_balancing_trigger_volt
+                        name: balancing_trigger_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_balancing_starting_volt
+                        name: balancing_starting_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_max_balancing_current
+                        name: max_balance_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_count_settings
+                        name: cell_count_settings
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_overvolt_protection
+                        name: cell_overvolt_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_overvolt_protection_recovery
+                        name: overvolt_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_power_off_volt
+                        name: cell_power_off_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_request_charge_volt
+                        name: cell_request_charge_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_request_charge_volt_time
+                        name: cell_request_charge_volt_time
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_request_float_volt
+                        name: cell_request_float_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_request_float_volt_time
+                        name: cell_request_float_volt_time
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_smart_sleep_volt
+                        name: cell_smart_sleep_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_soc0_volt
+                        name: cell_soc0_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_soc100_volt
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_undervolt_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_cell_undervolt_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_lowtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_lowtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_overcurrent_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_overcurrent_protection_recovery_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_charging_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging_overcurrent_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging_overcurrent_protection_recovery_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_discharging_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_max_charge_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_max_discharge_current
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_mos_overtemp_protection
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_mos_overtemp_protection_recovery
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_precharging_time_from_discharge
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_short_circuit_protection_delay
+                      - entity: >-
+                          number.esp32_jk_bms_hub_rs485_01_jk_bms_2_short_circuit_protection_recovery_delay
+            columns: 1
+        columns: 2

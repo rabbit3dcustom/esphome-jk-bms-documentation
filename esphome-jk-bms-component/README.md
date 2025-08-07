@@ -63,8 +63,8 @@ The next section will redirect you to the file example list.
 [configuration files](configuration_yaml_files.md)
 
 ## Home Assistant Dashboards
-
-
+Lets have fancy dasboard on Home Assistant to check and monitor your JKBms
+[configuration files](home_assistant_dashboards\README.md)
 
 <details>
 
