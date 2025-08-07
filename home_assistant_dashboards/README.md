@@ -16,22 +16,22 @@ Give the opportunity to the community to see other examples of home assistant da
 ## Stock
 This dashboard is inherited from syssi component and modified from the txubelatxu component that was a little messy.
 
-![ScreenShot 01](home_assistant_dashboards\images\dashboard_JKBms_System_01.png)
-![ScreenShot 02](home_assistant_dashboards\images\dashboard_JKBms_System_02.png)
-![ScreenShot 03](home_assistant_dashboards\images\dashboard_JKBms_System_03.png)
+![ScreenShot 01](home_assistant_dashboards/images/dashboard_JKBms_System_01.png)
+![ScreenShot 02](home_assistant_dashboards/images/dashboard_JKBms_System_02.png)
+![ScreenShot 03](home_assistant_dashboards/images/dashboard_JKBms_System_03.png)
 
 ### Requirements
 No
 
 ### Link
-[Stock dashboard](home_assistant_dashboards\dashboards\dashboard_JKBms_System.yaml)
+[Stock dashboard](home_assistant_dashboards/dashboards/dashboard_JKBms_System.yaml)
 
 ## Battery Rack
 This dashboard is made by myself, having in mind the setup of my future four batteries in a shelf or rack. It mimic the physical position of each battery.
 
-![ScreenShot 01](home_assistant_dashboards\images\dashboard_JKBms_battery_rack_01.png)
-![ScreenShot 02](home_assistant_dashboards\images\dashboard_JKBms_battery_rack_02.png)
-![ScreenShot 03](home_assistant_dashboards\images\dashboard_JKBms_battery_rack_03.png)
+![ScreenShot 01](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_01.png)
+![ScreenShot 02](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_02.png)
+![ScreenShot 03](home_assistant_dashboards/images/dashboard_JKBms_battery_rack_03.png)
 
 ### Requirements
 You need to install via hacks or integrations the following:
@@ -40,4 +40,4 @@ You need to install via hacks or integrations the following:
 - Vertical Stack In Card:  Custom Lovelace card for Home Assistant, allowing you to group multiple cards into a single sleek card.
 
 ### Link
-[Battery rack](home_assistant_dashboards\dashboards\dashboard_JKBms_battery_rack.yaml)
+[Battery rack](home_assistant_dashboards/dashboards/dashboard_JKBms_battery_rack.yaml)

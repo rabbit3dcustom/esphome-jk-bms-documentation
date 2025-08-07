@@ -64,11 +64,15 @@ The next section will redirect you to the file example list.
 
 ## Home Assistant Dashboards
 Lets have fancy dasboard on Home Assistant to check and monitor your JKBms
-[configuration files](home_assistant_dashboards\README.md)
+[configuration files](../home_assistant_dashboards/README.md)
 
+## Support me at
+[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://coff.ee/rabbit3dcustom)
+
+## Anex
 <details>
 
-<summary>Other related information</summary>
+<summary>Other related and old information</summary>
 
 ## MUCH MORE
 
@@ -93,6 +97,5 @@ Added a <a href="./home_assistant_dashboards/">Home Assistant Dashboard</a>
 <details>
 
 
-### Support me at
-[!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://coff.ee/rabbit3dcustom)
+
 
