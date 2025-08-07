@@ -24,7 +24,7 @@ This dashboard is inherited from syssi component and modified from the txubelatx
 No
 
 ### Link
-[Stock dashboard](home_assistant_dashboards/dashboards/dashboard_JKBms_System.yaml)
+[Stock dashboard](dashboards/dashboard_JKBms_System.yaml)
 
 ## Battery Rack
 This dashboard is made by myself, having in mind the setup of my future four batteries in a shelf or rack. It mimic the physical position of each battery.
@@ -41,4 +41,4 @@ You need to install via hacks or integrations the following:
 - Vertical Stack In Card:  Custom Lovelace card for Home Assistant, allowing you to group multiple cards into a single sleek card.
 
 ### Link
-[Battery rack](home_assistant_dashboards/dashboards/dashboard_JKBms_battery_rack.yaml)
+[Battery rack](dashboards/dashboard_JKBms_battery_rack.yaml)
