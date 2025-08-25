@@ -51,3 +51,9 @@ In the next example i will use a RJ45 type A connector, but for the JK itself th
 - Remember the GPIO pins that you use, to configure the esp yaml file later.
 - I never test it with the physical TX and RX pin, so be advise, i don't know it it works.
 
+## JKBMS communication board
+
+The RJ45 connector should be connected in the right most RJ45 sockets of the communication board, does mark as UART-2 or RS485-2.
+
+![image](./images/JK-Internal-Ports.jpg)
+

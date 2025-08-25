@@ -21,15 +21,15 @@ The BMS bluetooth remains free to use with your mobile.
 
 ## Supported devices
 
-JK-PBx models with software version above 15.32 are using the implemented protocol and should be supported.
+JK-PBx models with software version above 15.32 are using the implemented protocol and should be supported. Tested also with V19
 
 - JK-PB2A16S-20P, hw 15.XA, sw 15.32 to 15.41
+- JK-PB2A16S-20P, hw 19   , sw 19.03 to 19.05
 
 Other PB models should work, but not tested.
 
 ## Untested devices
 
-- JK-PB hw 19.XA
 - JK-PB hw 14.XA
 
 ## Requirements
