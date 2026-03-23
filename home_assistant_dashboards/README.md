@@ -39,6 +39,9 @@ You need to install via hacks or integrations the following:
 - Mushroom :  Mushroom is a collection of cards for Home Assistant Dashboard UI.
 - Restriction Card: A card to provide restrictions on Lovelace cards defined within.
 - Vertical Stack In Card:  Custom Lovelace card for Home Assistant, allowing you to group multiple cards into a single sleek card.
+- button-card
+- text-divider-row
+- grid-layout
 
 ### Link
 [Battery rack](dashboards/dashboard_JKBms_battery_rack.yaml)
