@@ -1,0 +1,1 @@
+esphome -s external_components_source components run faker_09-Slave01_V19_03_FrameType03.yaml
