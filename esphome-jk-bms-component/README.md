@@ -63,8 +63,10 @@ The next section will redirect you to the file example list.
 [configuration files](configuration_yaml_files.md)
 
 ## Home Assistant Dashboards
-Lets have fancy dasboard on Home Assistant to check and monitor your JKBms
-[configuration files](../home_assistant_dashboards/README.md)
+
+Use the dashboard examples to monitor your JK-BMS data in Home Assistant.
+
+[Home Assistant dashboards](../home_assistant_dashboards/README.md)
 
 ## Support me at
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://coff.ee/rabbit3dcustom)
@@ -76,7 +78,7 @@ Lets have fancy dasboard on Home Assistant to check and monitor your JKBms
 
 ## MUCH MORE
 
-Added a <a href="./home_assistant_dashboards/">Home Assistant Dashboard</a>
+Added a <a href="../home_assistant_dashboards/">Home Assistant Dashboard</a>
 ![image](https://github.com/user-attachments/assets/cd561b9c-08ef-4ab8-8837-5855f91f27ae)
 ![image](https://github.com/user-attachments/assets/d09ed79e-568a-4be1-8d24-a8dd1e1e1831)
 ![image](https://github.com/user-attachments/assets/4d8a4db5-46c3-427d-a8f5-dc2a4a9a3b72)
