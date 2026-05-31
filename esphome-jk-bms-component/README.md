@@ -68,6 +68,12 @@ Use the dashboard examples to monitor your JK-BMS data in Home Assistant.
 
 [Home Assistant dashboards](../home_assistant_dashboards/README.md)
 
+## Troubleshooting
+
+If you see API instability, delayed updates, or Home Assistant disconnections, review the troubleshooting guide:
+
+[Troubleshooting](./troubleshooting.md)
+
 ## Support me at
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://coff.ee/rabbit3dcustom)
 
